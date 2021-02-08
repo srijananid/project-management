@@ -6,7 +6,7 @@ services:
 
 
 before_install:
-  - docker build -t srijananid/client .
+  - docker build -t srijananid/client -f Dockerfile.dev .
 
 deploy:
   provider: elasticbeanstalk
