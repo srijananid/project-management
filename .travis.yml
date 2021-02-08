@@ -8,3 +8,15 @@ services:
 before_install:
   - docker build -t srijananid/client -f Dockerfile.dev .
 
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-1'
+  app: 'projectManagementClient'
+  env: 'Projectmanagementclient-env'
+  bucket_name: 'elasticbeanstalk-ap-southeast-1-141824311220'
+  bucket_path: 'projectManagementClient'
+  on :
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+	secret_access_key: $AWS_SECRET_KEY
+
