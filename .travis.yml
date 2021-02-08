@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'ap-southeast-1'
   app: 'projectManagementClient'
-  env: 'Projectmanagementclient-env'
+  env: 'Projectmanagementclient-env-1'
   bucket_name: 'elasticbeanstalk-ap-southeast-1-141824311220'
   bucket_path: 'projectManagementClient'
   on :
